@@ -1,5 +1,5 @@
-//Nome: Gabriel Oliveira Santos / MatrÌcula: UC21100452
-//Nome: Gustavo  / MatrÌcula: UC211
+//Nome: Gabriel Oliveira Santos / Matr√≠cula: UC21100452
+//Nome: Gustavo Maxwel de Sousa Oliveira / Matr√≠cula: UC21101257
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,7 +21,7 @@ struct Piloto piloto;
  	float tamanho;
  	double menorTempo, tempo;
 	int codigo;
-	char nome[200], pais[50];//esqueci do paÌs
+	char nome[200], pais[50];//esqueci do pa√≠s
 	//pedir o id do piloto e verificar se existe com a struct Piloto.
 };
 
@@ -153,14 +153,14 @@ void le_valida_idPiloto(struct MelhorVolta f1[], int index){
 	int unId=0;
 	
 	do{
-		printf("IdentificaÁ„o do piloto: ");
+		printf("Identifica√ß√£o do piloto: ");
 		scanf("%d", &f1[index].piloto.idPiloto);
 		
 		for(unId; unId<index; unId++){
 			if(f1[index].piloto.idPiloto == f1[unId].piloto.idPiloto){
 				do{
-					printf("Esse n˙mero j· est· em uso!\n");
-					printf("IdentificaÁ„o do piloto: ");
+					printf("Esse n√∫mero j√° est√° em uso!\n");
+					printf("Identifica√ß√£o do piloto: ");
 					scanf("%d", &f1[index].piloto.idPiloto);
 				}while(f1[index].piloto.idPiloto == f1[unId].piloto.idPiloto);	
 			}
@@ -209,7 +209,7 @@ void le_valida_nomePiloto(struct MelhorVolta f1[], int index){
 			}
 		}
 		if(tam<1 || tam>200){
-			printf("O nome n„o pode ser nulo\n");
+			printf("O nome n√£o pode ser nulo\n");
 		}
 	}while(tam<1 || tam>200);
 }
@@ -228,7 +228,7 @@ void le_valida_paisPilotoP(struct MelhorVolta f1[], int index){
 			printf("Erro ao abrir o arquivo!");
 		}else{
 				fflush(stdin);
-				printf("PaÌs piloto:");
+				printf("Pa√≠s piloto:");
 				scanf("%[^\n]s",&f1[index].piloto.pais);
 				
 				tam=strlen(f1[index].piloto.pais);
@@ -250,13 +250,13 @@ void le_valida_paisPilotoP(struct MelhorVolta f1[], int index){
 				while(fscanf(arq,"%s",arqPaises)!=EOF){
 					if(strcmp(arqPaises, f1[index].piloto.pais)==0){
 						valido=1;
-						printf("PaÌs Aceito!\n\n");
+						printf("Pa√≠s Aceito!\n\n");
 						break;
 					}	
 				}
 		
 				if(valido==0){
-					printf("PaÌs Inexistente!\n");
+					printf("Pa√≠s Inexistente!\n");
 				}
 		}
 		fclose(arq);
@@ -300,7 +300,7 @@ void le_valida_nomeCircuito(struct MelhorVolta f1[], int index){
 		if(tam>200){
 			printf("Muito grande!(<200)\n");
 		}else if(tam<1){
-					printf("O nome n„o pode ser nulo!(>5)\n");
+					printf("O nome n√£o pode ser nulo!(>5)\n");
 				}
 	}while(tam>200|| tam<1);
 }
@@ -338,7 +338,7 @@ void le_valida_paisCircuito(struct MelhorVolta f1[], int index){
 				
 				}
 				fflush(stdin);
-				printf("\nPaÌs do circuito:");
+				printf("\nPa√≠s do circuito:");
 				scanf("%[^\n]s",&f1[index].circuito.pais);
 				
 				tam=strlen(f1[index].circuito.pais);
@@ -360,13 +360,13 @@ void le_valida_paisCircuito(struct MelhorVolta f1[], int index){
 				while(fscanf(arq,"%s",arqPaises)!=EOF){
 					if(strcmp(arqPaises, f1[index].circuito.pais)==0){
 						valido=1;
-						printf("PaÌs Aceito!\n\n");
+						printf("Pa√≠s Aceito!\n\n");
 						break;
 					}	
 				}
 		
 				if(valido==0){
-					printf("PaÌs Inexistente!\n");
+					printf("Pa√≠s Inexistente!\n");
 				}
 				
 
@@ -385,7 +385,7 @@ void le_valida_menorTempoCircuito(struct MelhorVolta f1[], int index, int cont1)
 		scanf("%lf",&f1[index].circuito.tempo);
 		fflush(stdin);
 		printf("\n%lf", f1[index].circuito.tempo);
-		printf("\nIdentificaÁ„o do piloto:");
+		printf("\nIdentifica√ß√£o do piloto:");
 		scanf("%d",&auxId);
 		
 		for(f; f<cont1; f++){
